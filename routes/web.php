@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\ArticleController::class, 'index'])->name('article.index');
-Route::get('/{article}', [\App\Http\Controllers\ArticleController::class, 'show'])->name('article.show');
-
 
 Route::get('/parser', [\App\Http\Controllers\ParserController::class, 'index'])->name('parser');
+
+Route::get('/', [\App\Http\Controllers\ArticleController::class, 'index']);
+
+Route::get('/{article}', [\App\Http\Controllers\ArticleController::class, 'show'])->name('article.show');
+
